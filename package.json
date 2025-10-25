@@ -1,0 +1,29 @@
+{
+  "name": "backendforweb",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "xzellent",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "joi": "^18.0.1",
+    "mongoose": "^8.19.2",
+    "nodemailer": "^7.0.9",
+    "nodemon": "^3.1.10",
+    "resend": "^6.2.2",
+    "uuid": "^13.0.0"
+  }
+}
