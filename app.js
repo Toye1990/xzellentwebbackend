@@ -24,10 +24,17 @@ mongoose.connect(url)
  app.use(extfileupload())
  app.use(cookieparser())
  app.use(express.json())
- app.use(cors({
-  origin: "http://localhost:5173", // or your React app URL
-  credentials: true, // allow cookies to be sent/received
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // for local dev (Vite)
+      "https://xzellentweb.vercel.app", // your deployed frontend
+      "https://yourcustomdomain.com" // if you have a custom domain later
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use("/api/v1", authroute)
 
 app.get("/", (req, res) =>{
