@@ -25,6 +25,7 @@ mongoose.connect(url)
  app.use(cookieparser())
  app.use(express.json())
 app.use(cors({
+  //origin: "http://localhost:5173",  // your frontend URL
   origin: "https://xzellentsite.vercel.app",  // your frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
